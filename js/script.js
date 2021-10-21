@@ -83,6 +83,7 @@ function keyUpFunction(){
     if(gameRun){
         document.body.onkeyup = startGame
         document.body.onmouseup = startGame
+        document.body.ontouchend = startGame
     }
 }
 function gameOver(){
@@ -90,6 +91,7 @@ function gameOver(){
     frame.innerHTML = "<h2 class='show-info'>Game Over<br>Double Click for Restart The Game</h2><h4 class='show-info'>Total Score - "+totalScore+"</h4>"
     document.body.onkeydown = null
     document.body.onmousedown = null
+    document.body.ontouchstart = null
     position = []
     id = 1
     keyPress = false;
@@ -104,10 +106,12 @@ function start(){
     document.body.onkeyup = null
     document.body.onmouseup = null
     document.body.onkeydown = keyPressFunction
-    document.body.onkeyup = keyUpFunction 
+    document.body.onkeyup = keyUpFunction
     document.body.onmousedown = keyPressFunction
-    document.body.onmouseup = keyUpFunction 
-    intervalManager = setInterval(run,7)
+    document.body.onmouseup = keyUpFunction
+    document.body.ontouchstart = keyPressFunction
+    document.body.ontouchend = keyUpFunction
+    intervalManager = setInterval(run,10)
 }
 function startGame(){
     if(gameRun){
