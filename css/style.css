@@ -1,0 +1,67 @@
+.cover{
+    background-color: black;
+    padding: 5px;
+    height: 80vh;
+    width: 70%;
+    margin: 7vh auto 10px auto;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.frame{
+    height: calc(100% - 18px);
+    width: 100%;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+}
+.message{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    .cover{
+        margin: 7vh 0px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:280px){
+    .cover{
+        display: none;
+    }
+    .enjoy{
+        display: none;
+    }
+    .message{
+        display: block;
+    }
+}
+.wall{
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    right: 0px;
+}
+.upper-wall{
+    background-color: aliceblue;
+}
+.mid-wall{
+    background-color: aqua;
+}
+.lower-wall{
+    background-color: aliceblue;
+}
+.box{
+    background-color: orange;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 50;
+}
+.show-info{
+    text-align: center;
+}
+.enjoy{
+    text-align: center;
+    color: orangered;
+    font-weight: bold;
+}
