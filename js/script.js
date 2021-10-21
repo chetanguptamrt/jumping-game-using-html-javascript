@@ -107,7 +107,7 @@ function start(){
     document.body.onkeyup = keyUpFunction 
     document.body.onmousedown = keyPressFunction
     document.body.onmouseup = keyUpFunction 
-    intervalManager = setInterval(run,10)
+    intervalManager = setInterval(run,7)
 }
 function startGame(){
     if(gameRun){
