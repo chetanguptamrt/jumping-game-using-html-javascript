@@ -88,7 +88,7 @@ function keyUpFunction(){
 }
 function gameOver(){
     clearInterval(intervalManager)
-    frame.innerHTML = "<h2 class='show-info'>Game Over<br>Double Click for Restart The Game</h2><h4 class='show-info'>Total Score - "+totalScore+"</h4>"
+    frame.innerHTML = "<h2 class='show-info'>Game Over<br>Click for Restart The Game</h2><h4 class='show-info'>Total Score - "+totalScore+"</h4>"
     document.body.onkeydown = null
     document.body.onmousedown = null
     document.body.ontouchstart = null
